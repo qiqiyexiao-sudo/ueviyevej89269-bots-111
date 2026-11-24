@@ -1,0 +1,9 @@
+#!name=Duolingo Max 解锁（自用仓库版）
+#!desc=script-path 指向自己仓库 qiqiyexiao-sudo/ueviyevej89269-bots-111，只有自己能改
+#!author=自用
+
+[MITM]
+hostname = %APPEND% ios-api-*.duolingo.com, ios-api-*.duolingo.cn, api*.duolingo.com, api*.duolingo.cn
+
+[Script]
+duolingo_max = type=http-response,pattern=^https?:\/\/(ios-api-[a-z0-9-]+|api\d+)\.duolingo\.c(n|om)\/2023-05-23\/(batch|users\/[^\/?#]+)(?:[?#]|$),script-path=https://raw.githubusercontent.com/qiqiyexiao-sudo/ueviyevej89269-bots-111/main/JS%E6%96%87%E4%BB%B6.js,requires-body=1,max-size=31457280,timeout=120
